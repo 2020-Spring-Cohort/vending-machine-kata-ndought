@@ -2,21 +2,21 @@ package com.fizzbuzzcola.vendingmachine;
 
 public class Coin {
 
-    public String coinName;
+    public String metalType;
 
-    public double coinValue;
+    public double coinSize;
 
 
-    public Coin(String coinName, double coinValue) {
-        this.coinName = coinName;
-        this.coinValue = coinValue;
+    public Coin(String metalType, double coinSize) {
+        this.metalType = metalType;
+        this.coinSize = coinSize;
     }
 
-    public String getCoinName() {
-        return coinName;
+    public String getMetalType() {
+        return metalType;
     }
 
-    public double getCoinValue() {
-        return coinValue;
+    public double getCoinSize() {
+        return coinSize;
     }
 }

@@ -11,12 +11,21 @@ public class CoinTest {
 
     @BeforeEach
     public void setup() {
-        underTest = new Coin("nickel", .05);
+        underTest = new Coin("Cupro-Nickle", .835);
     }
 
     @Test
-    public void coinShouldHaveAValue() {
-        underTest.getCoinValue();
-        assertEquals(.05, underTest.getCoinValue());
+    public void coinsShouldHaveACertainSize() {
+        underTest.getCoinSize();
+        assertEquals(.835, underTest.getCoinSize());
+    }
+
+    @Test
+    public void coinsShouldBeMadeOfCertainMetal() {
+        underTest.getMetalType();
+        assertEquals("Cupro-Nickle", underTest.getMetalType());
     }
 }
+
+
+
