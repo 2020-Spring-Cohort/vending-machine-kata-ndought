@@ -1,16 +1,21 @@
 package com.fizzbuzzcola.vendingmachine;
 
+import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VendingMachineTest {
 
-    VendingMachine underTest;
+    private Object Coin;
 
-    Coin testCoin;
-
-    @BeforeEach
-    public void setUp() {
-        underTest = new VendingMachine("Doritos", .75, .25);
+    @Test
+    public void vendingMachineCanAcceptNickles() {
+        //Arrange
+        VendingMachine vendingMachine = new VendingMachine();
+        Coin nickle = new Coin("Cupro-Nickle", .835);
+        //Assert
+        assertEquals(.05, vendingMachine.acceptsCoins(nickle));
     }
 
 
