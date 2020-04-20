@@ -5,7 +5,15 @@ public class VendingMachine {
 
 
 
-    public Object acceptsCoins(Coin nickle) {
+    public double acceptsNickles(Coin nickleCoin) {
         return + .05;
+    }
+
+    public double acceptsDimes(Coin dimeCoin) {
+        return + .10;
+    }
+
+    public double acceptsQuarters(Coin quarterCoin) {
+        return + .25;
     }
 }

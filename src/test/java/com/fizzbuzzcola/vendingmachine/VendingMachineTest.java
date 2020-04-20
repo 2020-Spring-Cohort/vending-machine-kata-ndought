@@ -10,12 +10,26 @@ public class VendingMachineTest {
     private Object Coin;
 
     @Test
-    public void vendingMachineCanAcceptNickles() {
+    public void vendingMachineAcceptsNickles() {
         //Arrange
         VendingMachine vendingMachine = new VendingMachine();
-        Coin nickle = new Coin("Cupro-Nickle", .835);
+        Coin nickleCoin = new Coin("Cupro-Nickle", .835);
         //Assert
-        assertEquals(.05, vendingMachine.acceptsCoins(nickle));
+        assertEquals(.05, vendingMachine.acceptsNickles(nickleCoin));
+    }
+
+    @Test
+    public void vendingMachineAcceptsDimes() {
+        VendingMachine vendingMachine = new VendingMachine();
+        Coin dimeCoin = new Coin("Cupro-Nickle", .705);
+        assertEquals(.10, vendingMachine.acceptsDimes(dimeCoin));
+    }
+
+    @Test
+    public void vendingMachineAcceptsQuarters() {
+        VendingMachine vendingMachine = new VendingMachine();
+        Coin quarterCoin = new Coin("Cupro-Nickle", .955);
+        assertEquals(.25, vendingMachine.acceptsQuarters(quarterCoin));
     }
 
 
